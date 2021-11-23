@@ -49,3 +49,5 @@ Add code to a script on your GameObject to set the Parameter(s) to change the an
         // Code to move
     }
 ```
+
+![Car model animator and game view showing a red car moving with animation.](images/dog-anim-test.gif)
