@@ -25,7 +25,10 @@ Go to the 'Parameters' tab.  Bool parameters allow you to change between animati
 
 Add code to a script on your GameObject to set the Parameter(s) to change the animation:
 
-```
+--- code ---
+---
+language: cs
+---
     Animator anim;
 
     // Start is called before the first frame update
@@ -48,6 +51,6 @@ Add code to a script on your GameObject to set the Parameter(s) to change the an
 
         // Code to move
     }
-```
+--- /code ---
 
 ![Car model animator and game view showing a dog moving with animation.](images/dog-anim-test.gif)
