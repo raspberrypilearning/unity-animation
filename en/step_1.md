@@ -27,7 +27,11 @@ Add code to a script on your GameObject to set the Parameter(s) to change the an
 
 --- code ---
 ---
-language: cs
+language: csharp
+filename: follower.cs
+line_numbers: false
+line_number_start: 
+line_highlights: 
 ---
 
 Animator anim;
