@@ -19,6 +19,10 @@ Go to the 'Parameters' tab.  Bool parameters allow you to change between animati
 
 ![The Animator window with Parameters tab selected and new parameter called 'isRunning' appears in the list.](images/isRunning-param.png)
 
+Select the transition in the Inspector and add a 'Condition', and set it to the Parameter `isRunning` that you created to either `true` or `false`. In the example below, the transition from `sit` -> `walk` is triggered when `isRunning` is `true`.
+
+![transition in inspector showing the Condition isRunning is set to true](images/transition.png)
+
 **Tip:** Unselect 'Exit Time' on transitions to make the animation change immediately without completing. 
 
 ### Adding code to your GameObject to control the animation
