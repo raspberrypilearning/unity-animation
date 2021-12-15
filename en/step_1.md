@@ -58,7 +58,7 @@ Animator anim;
             anim.SetBool("isRunning", false);
         }
 
-        // Code to move
+        // Add movement code here
     }
 
 --- /code ---
