@@ -38,13 +38,13 @@ line_number_start:
 line_highlights: 
 ---
 
-Animator anim;
+    Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
-        anim.SetBool("isRunning", false);
+        anim.SetBool("isRunning", false); // idle
     }
 
     void Update()
