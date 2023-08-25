@@ -1,0 +1,7 @@
+Start is called before the first frame update
+
+idle
+
+forwards
+
+Add movement code here
