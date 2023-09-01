@@ -1,33 +1,33 @@
-### Choosing or creating an Animator
-The Unity starter asset pack includes animations that can be used with the models. It also includes some Animators including 'IdleWalk' and others in the 'Animation/More/Animators' folder including Animators for the Car models.
+### Choisir ou créer un Animator
+Le pack de ressources de démarrage Unity comprend des animations qui peuvent être utilisées avec les modèles. Il comprend également quelques Animators, notamment « IdleWalk » ainsi que d'autres dans le dossier « Animation/More/Animators », incluant des Animators pour les modèles de voiture.
 
-![Car model animator and game view showing a red car moving with animation.](images/car-anim.gif)
+![Modèle de voiture animateur et vue Game montrant une voiture rouge se déplaçant avec une animation.](images/car-anim.gif)
 
-To create your own animation, select the 'Animation' folder in the Project window and right-click then create a new Animation Controller.
+Pour créer ta propre animation, sélectionne le dossier « Animation » dans la fenêtre Project et fais un clic droit puis crée un nouveau Animation Controller.
 
-Click on the GameObject that will use the Animator and go to the Inspector window. Drag the Animator controller to the 'Controller' property in the 'Animator' component:
+Clique sur le GameObject qui utilisera l'Animator et accède à la fenêtre Inspector. Fais glisser l'Animator Controller sur la propriété « Controller » du composant « Animator » :
 
-![The animator component with 'FollowMove' in the Controller property.](images/animator-follow.png)
+![Le composant Animator avec « FollowMove » dans la propriété Controller.](images/animator-follow.png)
 
-Double-click on the Animator to open it in the Animation window. Drag in the animations you want to use. Right-click on animations to add transitions for all the animation changes that you character can make.
+Double-clique sur l'Animator pour l'ouvrir dans la fenêtre Animation. Fais glisser les animations que tu veux utiliser. Clique avec le bouton droit sur les animations pour ajouter des transitions pour tous les changements d'animation que ton personnage peut effectuer.
 
-![The animator window with new 'Dog_Run' grey box and arrows going between the idle and run boxes in both directions.](images/idle-run-animator.png)
+![La fenêtre de l'animateur avec la nouvelle boîte grise « Dog_Run » et les flèches allant entre les boîtes de ralenti et de course dans les deux directions.](images/idle-run-animator.png)
 
-Go to the 'Parameters' tab.  Bool parameters allow you to change between animations by setting them to 'true' or 'false' in your code. Parameter examples include 'forward', 'crashed', 'isRunning'. To add a parameter, click on the dropdown arrow next to the '+'. Choose 'bool' and add a new Parameter.
+Va dans l'onglet « Parameters ».  Les paramètres bool te permettent de passer d'une animation à l'autre en leur attribuant la valeur « true » ou « false » dans ton code. Les exemples de paramètres incluent « forward », « crashed », « isRunning ». Pour ajouter un paramètre, clique sur la flèche déroulante à côté du « + ». Choisis « bool » et ajoute un nouveau paramètre.
 
-![The Animator window with Parameters tab selected in the top left. The '+' button is extended with optin 'bool' selected.](images/animator-parameters.png)
+![La fenêtre Animator avec l'onglet Parameters sélectionné en haut à gauche. Le bouton « + » est étendu avec l'option « bool » sélectionnée.](images/animator-parameters.png)
 
-![The Animator window with Parameters tab selected and new parameter called 'isRunning' appears in the list.](images/isRunning-param.png)
+![La fenêtre Animator avec l'onglet Parameters est sélectionnée et un nouveau paramètre appelé « isRunning » apparaît dans la liste.](images/isRunning-param.png)
 
-Select the transition in the Inspector and add a 'Condition', and set it to the Parameter `isRunning` that you created to either `true` or `false`. In the example below, the transition from `sit` -> `walk` is triggered when `isRunning` is `true`.
+Sélectionne la transition dans l'Inspector et ajoute une « Condition », et règle-la sur le paramètre `isRunning` que tu as créé sur `true` ou `false`. Dans l'exemple ci-dessous, la transition de `sit` -> `walk` est déclenchée lorsque `isRunning` est `true`.
 
-![transition in inspector showing the Condition isRunning is set to true](images/transition.png)
+![transition dans l'Inspector montrant que la condition isRunning définie sur true](images/transition.png)
 
-**Tip:** Unselect 'Exit Time' on transitions to make the animation change immediately without completing.
+**Astuce :** désélectionne « Exit Time » sur les transitions pour que l'animation change immédiatement sans se terminer.
 
-### Adding code to your GameObject to control the animation
+### Ajouter du code à ton GameObject pour contrôler l'animation
 
-Add code to a script on your GameObject to set the Parameter(s) to change the animation:
+Ajoute du code à un script sur ton GameObject pour définir le(s) paramètre(s) permettant de modifier l'animation :
 
 --- code ---
 ---
@@ -60,4 +60,4 @@ line_highlights:
 
 --- /code ---
 
-![Car model animator and game view showing a dog moving with animation.](images/dog-anim-test.gif)
+![Animator de modèle de voiture et vue Game montrant un chien se déplaçant avec une animation.](images/dog-anim-test.gif)
