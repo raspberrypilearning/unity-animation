@@ -1,33 +1,33 @@
-### Choosing or creating an Animator
-The Unity starter asset pack includes animations that can be used with the models. It also includes some Animators including 'IdleWalk' and others in the 'Animation/More/Animators' folder including Animators for the Car models.
+### Een Animator kiezen of maken
+Het Unity-startpakket bevat animaties die met de modellen kunnen worden gebruikt. Het bevat ook een aantal Animatoren, waaronder IdleWalk, en andere in de map Animation/More/Animatoren, waaronder Animatoren voor de Car modellen.
 
-![Car model animator and game view showing a red car moving with animation.](images/car-anim.gif)
+![Car model animator en game weergave met een rode auto met animatie.](images/car-anim.gif)
 
-To create your own animation, select the 'Animation' folder in the Project window and right-click then create a new Animation Controller.
+Om je eigen animatie te maken, selecteer de 'Animation' map in het Project venster en klik met de rechtermuisknop om een nieuwe Animation Controller te maken.
 
-Click on the GameObject that will use the Animator and go to the Inspector window. Drag the Animator controller to the 'Controller' property in the 'Animator' component:
+Klik op het GameObject dat de Animator zal gebruiken en ga naar het Inspector-venster. Sleep de Animator-controller naar de eigenschap 'Controller' in de component 'Animator':
 
-![The animator component with 'FollowMove' in the Controller property.](images/animator-follow.png)
+![De Animator-component met 'FollowMove' in de eigenschap Controller.](images/animator-follow.png)
 
-Double-click on the Animator to open it in the Animation window. Drag in the animations you want to use. Right-click on animations to add transitions for all the animation changes that you character can make.
+Dubbelklik op de Animator om deze in het Animation venster te openen. Sleep de animaties die je wilt gebruiken er naar toe. Klik met de rechtermuisknop op animations om overgangen toe te voegen voor alle animatiewijzigingen die je personage kan maken.
 
-![The animator window with new 'Dog_Run' grey box and arrows going between the idle and run boxes in both directions.](images/idle-run-animator.png)
+![Het Animator-venster met het nieuwe grijze vak 'Dog_Run' en pijlen die in beide richtingen tussen de vakken gaan.](images/idle-run-animator.png)
 
-Go to the 'Parameters' tab.  Bool parameters allow you to change between animations by setting them to 'true' or 'false' in your code. Parameter examples include 'forward', 'crashed', 'isRunning'. To add a parameter, click on the dropdown arrow next to the '+'. Choose 'bool' and add a new Parameter.
+Ga naar het tabblad 'Parameters'.  Met Bool-parameters kun je tussen animaties wisselen door ze in je code op 'true' of 'false' in te stellen. Voorbeelden van parameters zijn 'forward', 'crashed', 'isRunning'. Om een parameter toe te voegen, klik je op de dropdown pijl naast de '+'. Kies 'bool' en voeg een nieuwe parameter toe.
 
-![The Animator window with Parameters tab selected in the top left. The '+' button is extended with optin 'bool' selected.](images/animator-parameters.png)
+![Het Animator-venster met het tabblad Parameters linksboven geselecteerd. De '+' knop is uitgeklapt met optie 'bool' geselecteerd.](images/animator-parameters.png)
 
-![The Animator window with Parameters tab selected and new parameter called 'isRunning' appears in the list.](images/isRunning-param.png)
+![Het Animator-venster met het tabblad Parameters geselecteerd en de nieuwe parameter genaamd 'isRunning' verschijnt in de lijst.](images/isRunning-param.png)
 
-Select the transition in the Inspector and add a 'Condition', and set it to the Parameter `isRunning` that you created to either `true` or `false`. In the example below, the transition from `sit` -> `walk` is triggered when `isRunning` is `true`.
+Selecteer de overgang in de Inspector en voeg een 'Condition' toe. Stel deze in met de Parameter `isRunning` die je gemaakt hebt op `true` of `false`. In het onderstaande voorbeeld wordt de overgang van `sit` -> `walk` geactiveerd als `isRunning` `true` is.
 
-![transition in inspector showing the Condition isRunning is set to true](images/transition.png)
+![overgang in Inspector die laat zien dat de Condition isRunning is ingesteld op waar](images/transition.png)
 
-**Tip:** Unselect 'Exit Time' on transitions to make the animation change immediately without completing.
+**Tip:** Deselecteer 'Exit Time' bij overgangen om de animatie direct te wijzigen zonder te voltooien.
 
-### Adding code to your GameObject to control the animation
+### Voeg code toe aan je GameObject om de animatie te besturen
 
-Add code to a script on your GameObject to set the Parameter(s) to change the animation:
+Voeg code toe aan een script op je GameObject om de Parameter(s) in te stellen om de animatie te wijzigen:
 
 --- code ---
 ---
@@ -60,4 +60,4 @@ line_highlights:
 
 --- /code ---
 
-![Car model animator and game view showing a dog moving with animation.](images/dog-anim-test.gif)
+![Car model animator en game weergave met een hond met animatie.](images/dog-anim-test.gif)
