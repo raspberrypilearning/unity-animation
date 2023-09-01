@@ -1,7 +1,7 @@
-Start is called before the first frame update
+Start est appelé avant l'update de la première image
 
-idle
+inactif
 
-forwards
+avant
 
-Add movement code here
+Ajoute le code de mouvement ici
