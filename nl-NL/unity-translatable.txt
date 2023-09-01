@@ -1,0 +1,7 @@
+Start wordt aangeroepen vóór de eerste frame-update
+
+inactief
+
+vooruit
+
+Voeg hier bewegingscode toe
